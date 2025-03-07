@@ -1,3 +1,5 @@
+
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -24,14 +26,14 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 0;
   background-color: white;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
   color: white;
   text-transform: uppercase;
   overflow: hidden;
-  width: 600px;
+  width: 100vw;
 
     .logoWrapper {
     display: flex;
@@ -85,4 +87,91 @@ body {
       }
     }
   }
+}
+
+.search-container {
+  position: relative;
+  width: 25%;
+  max-width: 500px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 5px 10px;
+  padding-right: 150px; /* Spazio per le icone */
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+.icon-buttons {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 5px;
+  position: relative;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: #777;
+  transition: fill 0.3s;
+}
+
+.icon-button:hover .icon {
+  fill: #3498db;
+}
+
+.icon-button.active .icon {
+  fill: #3498db;
+}
+
+.heart-icon.active {
+  fill: #e74c3c;
+}
+
+.icon-button:hover .heart-icon {
+  fill: #e74c3c;
+}
+
+/* Badge per il numero di elementi nel carrello */
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Divisore verticale tra le icone */
+.divider {
+  height: 20px;
+  width: 1px;
+  background-color: #ddd;
+  margin: 0 5px;
 }

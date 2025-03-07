@@ -10,3 +10,6 @@ services.addEventListener('click', function() {
   $(services).toggleClass("active");
   $(".parent:not(#services)").toggleClass("invisible");
 }, false);
+
+//serch button
+document.addEventListener("touchstart", function(){}, true);
